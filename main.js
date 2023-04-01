@@ -40,7 +40,7 @@ function calculateDaysLeft(countdownDate) {
 }
 
 // Add a heading to the app container
-function inititialise() {
+/*function inititialise() {
   // If anything is wrong with the app container then end
   if (!appContainer) {
     console.error("Error: Could not find app contianer");
@@ -58,7 +58,7 @@ function inititialise() {
       daysLeft.toString(),
       " days "
     );
-  }
+  }*/
   h1.textContent = headingTextCalculated.concat(headingTextIcon);
   appContainer.appendChild(h1);
 
