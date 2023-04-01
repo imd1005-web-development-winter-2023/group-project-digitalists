@@ -20,25 +20,33 @@
     <link rel="icon" href="./images/favicon/rocket.svg" type="image/svg+xml" />
   </head>
   <body>
+    <header>
+      <div class="header-banner">
+        <h1 class ="site-title">Tic-Tac-Toe Pro</h1>
+      </div>
+    </header>
     <main>
-      <div id="app">
-        <p class="o">O</p>
-        <p class="x">X</p>
-        <p class = "o-wins"><span class="message bold">0</span> wins</p>
-        <p class = "x-wins"><span class="message bold">0</span> wins</p>
+      <div id ="app">
+        <div class ="player-wins">
+          <p class ="o">O</p>
+          <p class ="x">X</p>
+          <p class ="o-wins"><span class ="message bold">0</span> wins</p>
+          <p class ="x-wins"><span class ="message bold">0</span> wins</p>
+        </div>
         <button class="reset-game">Reset Game</button>
         <p class="themes">Change Website Theme:</p>
-        <button class="theme-1">Basic</button>
-        <button class="theme-2">Doodle</button>
-        <button class="theme-3">Spring</button>
-        <button class="theme-4">Summer</button>
-        <button class="theme-5">Fall</button>
-        <button class="theme-6">Winter</button>
-        <button class="theme-7">Pixel</button>
-        <p class = "player-turn">It is player <span class="message bold">1</span>'s turn.</p>
+        <div class="theme-buttons">
+          <button class ="theme-1">Basic</button>
+          <button class ="theme-2">Doodle</button>
+          <button class ="theme-3">Spring</button>
+          <button class ="theme-4">Summer</button>
+          <button class ="theme-5">Fall</button>
+          <button class ="theme-6">Winter</button>
+          <button class ="theme-7">Pixel</button>
+        </div>
+        <p class ="player-turn">It is player <span class ="message bold">1</span>'s turn.</p>
       </div>
     </main>
-
     <!-- This is where we add our awesome JavaScript code -->
     <script src="./main.js"></script>
   </body>
