@@ -1,73 +1,34 @@
 //
 //  JS File
-//  You may remove the code below - it's just boilerplate
-//
-
-//
-// Variables
-//
 
 // Constants
-const appID = "app";
-const headingText = "Develop. Preview. Ship.";
-const headingTextIcon = "🚀";
-const projectDueDate = "11 April 2023 11:59";
+const playerOneWins = document.querySelector(".o-wins .message");
+const playerTwoWins = document.querySelector(".x-wins .message");
+const playerTurn = document.querySelector(".player-turn .message");
+const resetButton = document.querySelector(".reset-game");
+const themeButtons = document.querySelectorAll(".theme-buttons button");
+const grid = document.querySelector(".grid");
 
 // Variables
-let countdownDate = new Date(projectDueDate);
+let currentPlayer = "o";
+let moves = 0;
+let board = ["", "", "", "", "", "", "", "", ""];
 
-// DOM Elements
-let appContainer = document.getElementById(appID);
 
-//
-// Functions
-//
-
-function calculateDaysLeft(countdownDate) {
-  const now = new Date().getTime();
-  const countdown = new Date(countdownDate).getTime();
-
-  const difference = (countdown - now) / 1000;
-
-  // Countdown passed already
-  if (difference < 1) {
-    return null;
-  }
-
-  const days = Math.floor(difference / (60 * 60 * 24));
-
-  return days;
+// Reseting the Game
+function resetGame() {
+  currentPlayer = "o";
+  moves = 0;
+  board = ["", "", "", "", "", "", "", "", ""];
+  playerOneWins.innerText = "0";
+  playerTwoWins.innerText = "0";
+  playerTurn.innerText = "It is player 1's turn.";
+  grid.querySelectorAll("img").forEach((img) => (img.style.display = "none"));
+  grid.querySelectorAll("p").forEach((p) => (p.style.display = "block"));
 }
 
-// Add a heading to the app container
-/*function inititialise() {
-  // If anything is wrong with the app container then end
-  if (!appContainer) {
-    console.error("Error: Could not find app contianer");
-    return;
-  }
+// Changing Game Theme
 
-  // Create an h1 and add it to our app
-  const h1 = document.createElement("h1");
-  const daysLeft = calculateDaysLeft(countdownDate);
-  let headingTextCalculated = headingText;
+// Handle a Move
 
-  if (daysLeft) {
-    headingTextCalculated = headingTextCalculated.concat(
-      " In ",
-      daysLeft.toString(),
-      " days "
-    );
-  }*/
-  h1.textContent = headingTextCalculated.concat(headingTextIcon);
-  appContainer.appendChild(h1);
-
-  // Init complete
-  console.log("App successfully initialised");
-}
-
-//
-// Inits & Event Listeners
-//
-
-//inititialise();
+// Event Listeners
