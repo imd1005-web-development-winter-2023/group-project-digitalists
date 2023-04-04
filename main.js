@@ -30,5 +30,26 @@ function resetGame() {
 // Changing Game Theme
 
 // Handle a Move
-
+function handleMove(event) {
+  if (event.target.tagName === "P") {
+    const index = [...event.target.parentNode.children].indexOf(event.target);
+    if (!board[index]) {
+      moves++;
+      board[index] = currentPlayer;
+      event.target.style.display = "none";
+      grid.querySelectorAll("img")[index].style.display = "block";
+      if (checkWin()) {
+        if (currentPlayer === "o") {
+          playerOneWins.innerText = parseInt(playerOneWins.innerText) + 1;
+        } else {
+          playerTwoWins.innerText = parseInt(playerTwoWins.innerText) + 1;
+        }
+        resetGame();
+      } else {
+        currentPlayer = currentPlayer === "o" ? "x" : "o";
+        playerTurn.innerText = `It is player ${currentPlayer === "o" ? 1 : 2}'s turn.`;
+      }
+    }
+  }
+}
 // Event Listeners
