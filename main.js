@@ -53,3 +53,7 @@ function handleMove(event) {
   }
 }
 // Event Listeners
+resetButton.addEventListener("click", resetGame);
+themeButtons.forEach((button) => button.addEventListener("click", changeTheme));
+grid.addEventListener("click", handleMove);
+
