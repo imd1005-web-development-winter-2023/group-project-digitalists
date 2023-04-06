@@ -25,16 +25,14 @@ let moves = 0;
 let board = ["", "", "", "", "", "", "", "", ""];
 
 
-// Reseting the Game
-function resetGame() {
-  currentPlayer = "o";
-  moves = 0;
-  board = ["", "", "", "", "", "", "", "", ""];
-  playerOneWins.innerText = "0";
-  playerTwoWins.innerText = "0";
-  playerTurn.innerText = "It is player 1's turn.";
-  grid.querySelectorAll("img").forEach((img) => (img.style.display = "none"));
-  grid.querySelectorAll("p").forEach((p) => (p.style.display = "block"));
+// Function to reset the board
+function resetBoard() {
+  // Remove all symbols from the tiles
+  tiles.forEach(tile => {
+    if (tile.children.length > 0) {
+      tile.removeChild(tile.children[0]);
+    }
+  });
 }
 
 // Changing Game Theme
