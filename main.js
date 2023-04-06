@@ -38,12 +38,16 @@ function resetGame() {
 }
 
 // Changing Game Theme
-function changeTheme () {
-
-}
 function changeDoodle() {
-  console.log("text");
-  root.style.setProperty('--background-colour', 'white');
+  //change xs and os
+  root.style.setProperty('--background-colour', '#BBBBBB');
+  root.style.setProperty('--text-colour', '#04052d');
+  root.style.setProperty('--border-colour', '#b7434f');
+  root.style.setProperty('--o-player', '#276ee0');
+  root.style.setProperty('--x-player', '#ef8607');
+  root.style.setProperty('--button-text', '#04052d');
+  root.style.setProperty('--button-background', '#b7434f');
+  //root.style.setProperty('--background-image', '');
 }
 
 //Check if Game has ended
