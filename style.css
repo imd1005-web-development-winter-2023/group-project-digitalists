@@ -42,6 +42,10 @@ header{
   text-align: center;
 }
 
+.header-banner h1 {
+  color: var(--text-colour);
+}
+
 main {
   min-height: 100vh;
 

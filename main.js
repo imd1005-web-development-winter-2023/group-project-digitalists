@@ -38,7 +38,79 @@ function resetGame() {
 }
 
 // Changing Game Theme
+function changeBasic() {
+  //change xs and os
+  root.style.setProperty('--background-colour', '#1d3557');
+  root.style.setProperty('--text-colour', '#f1faee');
+  root.style.setProperty('--border-colour', 'black');
+  root.style.setProperty('--o-player', 'green');
+  root.style.setProperty('--x-player', 'red');
+  root.style.setProperty('--button-text', 'black');
+  root.style.setProperty('--button-background', '#bebebe');
+  //root.style.setProperty('--background-image', '');
+}
+
 function changeDoodle() {
+  //change xs and os
+  root.style.setProperty('--background-colour', '#BBBBBB');
+  root.style.setProperty('--text-colour', '#04052d');
+  root.style.setProperty('--border-colour', '#b7434f');
+  root.style.setProperty('--o-player', '#276ee0');
+  root.style.setProperty('--x-player', '#ef8607');
+  root.style.setProperty('--button-text', '#04052d');
+  root.style.setProperty('--button-background', '#b7434f');
+  //root.style.setProperty('--background-image', '');
+}
+
+function changeSpring() {
+  //change xs and os
+  root.style.setProperty('--background-colour', '#9bff80');
+  root.style.setProperty('--text-colour', '#87092d');
+  root.style.setProperty('--border-colour', '#f1e973');
+  root.style.setProperty('--o-player', '#ce1f44');
+  root.style.setProperty('--x-player', '#e29bc4');
+  root.style.setProperty('--button-text', '#87092d');
+  root.style.setProperty('--button-background', '#f1e973');
+  //root.style.setProperty('--background-image', '');
+}
+
+function changeSummer() {
+  //change xs and os
+  root.style.setProperty('--background-colour', '#46b0e2');
+  root.style.setProperty('--text-colour', '#b78101');
+  root.style.setProperty('--border-colour', '#f1b715');
+  root.style.setProperty('--o-player', '#eef2f4');
+  root.style.setProperty('--x-player', '#ec5f4c');
+  root.style.setProperty('--button-text', '#b78101');
+  root.style.setProperty('--button-background', '#f1b715');
+  //root.style.setProperty('--background-image', '');
+}
+
+function changeFall() {
+  //change xs and os
+  root.style.setProperty('--background-colour', '#BBBBBB');
+  root.style.setProperty('--text-colour', '#04052d');
+  root.style.setProperty('--border-colour', '#b7434f');
+  root.style.setProperty('--o-player', '#276ee0');
+  root.style.setProperty('--x-player', '#ef8607');
+  root.style.setProperty('--button-text', '#04052d');
+  root.style.setProperty('--button-background', '#b7434f');
+  //root.style.setProperty('--background-image', '');
+}
+
+function changeWinter() {
+  //change xs and os
+  root.style.setProperty('--background-colour', '#BBBBBB');
+  root.style.setProperty('--text-colour', '#04052d');
+  root.style.setProperty('--border-colour', '#b7434f');
+  root.style.setProperty('--o-player', '#276ee0');
+  root.style.setProperty('--x-player', '#ef8607');
+  root.style.setProperty('--button-text', '#04052d');
+  root.style.setProperty('--button-background', '#b7434f');
+  //root.style.setProperty('--background-image', '');
+}
+
+function changePixel() {
   //change xs and os
   root.style.setProperty('--background-colour', '#BBBBBB');
   root.style.setProperty('--text-colour', '#04052d');
@@ -103,6 +175,12 @@ function handleMove(event) {
 // Event Listeners
 resetButton.addEventListener("click", resetGame);
 //themeButtons.forEach((button) => button.addEventListener("click", changeTheme));
+basicButton.addEventListener("click", changeBasic);
 doodleButton.addEventListener("click", changeDoodle);
+springButton.addEventListener("click", changeSpring);
+summerButton.addEventListener("click", changeSummer);
+fallButton.addEventListener("click", changeFall);
+winterButton.addEventListener("click", changeWinter);
+pixelButton.addEventListener("click", changePixel);
 grid.addEventListener("click", handleMove);
 
