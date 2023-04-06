@@ -1,56 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 26.5.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 612 792" style="enable-background:new 0 0 612 792;" xml:space="preserve">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 365.1 360" style="enable-background:new 0 0 365.1 360;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#EC5F4C;}
 	.st1{fill:#EBCC4E;}
 </style>
-<g id="Layer_1">
-	<path class="st0" d="M384.2,518.3l-57-38.4c-24.1-16.3-54.7-19.6-81.8-9l-64,25.2c-8.2,3.2-16.5-4.3-14.1-12.8l18.9-66.1
-		c8-28,1.8-58.1-16.7-80.6l-43.7-53.1c-5.6-6.8-1-17,7.8-17.3l68.7-2.4c29.1-1,55.8-16.3,71.4-40.8l37-58c4.7-7.4,15.9-6.2,18.9,2.1
-		l23.5,64.6c10,27.3,32.7,48,60.9,55.3l66.5,17.2c8.5,2.2,10.8,13.2,3.9,18.6l-54.2,42.3c-22.9,17.9-35.6,46-33.8,75l4.2,68.6
-		C401.2,517.6,391.5,523.2,384.2,518.3z"/>
+<g id="Layer_1_00000160898309714942546120000011688892512770568365_">
+	<path class="st0" d="M260.8,358.2l-57-38.4c-24.1-16.3-54.7-19.6-81.8-9L58,336c-8.2,3.2-16.5-4.3-14.1-12.8l18.9-66.1
+		c8-28,1.8-58.1-16.7-80.6L2.4,123.4c-5.6-6.8-1-17,7.8-17.3l68.7-2.4c29.1-1,55.8-16.3,71.4-40.8l37-58c4.7-7.4,15.9-6.2,18.9,2.1
+		l23.5,64.6c10,27.3,32.7,48,60.9,55.3l66.5,17.2c8.5,2.2,10.8,13.2,3.9,18.6L306.8,205c-22.9,17.9-35.6,46-33.8,75l4.2,68.6
+		C277.8,357.5,268.1,363.1,260.8,358.2z"/>
 </g>
-<g id="Layer_2">
-	<circle class="st1" cx="306" cy="314.2" r="5.9"/>
-	<circle class="st1" cx="309.9" cy="291.5" r="5.9"/>
-	<circle class="st1" cx="311.9" cy="270.4" r="5.9"/>
-	<circle class="st1" cx="313.7" cy="249.3" r="5.9"/>
-	<circle class="st1" cx="316.8" cy="227.1" r="5.9"/>
-	<circle class="st1" cx="317.6" cy="205" r="5.9"/>
-	<circle class="st1" cx="320.6" cy="181.5" r="5.9"/>
-	<circle class="st1" cx="313.7" cy="344.6" r="5.9"/>
-	<circle class="st1" cx="322.7" cy="363.6" r="5.9"/>
-	<circle class="st1" cx="334.8" cy="385.8" r="5.9"/>
-	<circle class="st1" cx="345.6" cy="409.6" r="5.9"/>
-	<circle class="st1" cx="356.5" cy="435.1" r="5.9"/>
-	<circle class="st1" cx="368.3" cy="456.9" r="5.9"/>
-	<circle class="st1" cx="379.5" cy="480.5" r="5.9"/>
-	<circle class="st1" cx="389.4" cy="504.3" r="5.9"/>
-	<circle class="st1" cx="291" cy="342.1" r="5.9"/>
-	<circle class="st1" cx="280.1" cy="359.8" r="5.9"/>
-	<circle class="st1" cx="266.5" cy="379.9" r="5.9"/>
-	<circle class="st1" cx="255.2" cy="397.3" r="5.9"/>
-	<circle class="st1" cx="241.6" cy="415.4" r="5.9"/>
-	<circle class="st1" cx="226.9" cy="433.7" r="5.9"/>
-	<circle class="st1" cx="212" cy="451" r="5.9"/>
-	<circle class="st1" cx="197.5" cy="468.7" r="5.9"/>
-	<circle class="st1" cx="184.4" cy="483.7" r="5.9"/>
-	<circle class="st1" cx="320.6" cy="327.4" r="5.9"/>
-	<circle class="st1" cx="340.7" cy="327.4" r="5.9"/>
-	<circle class="st1" cx="365.5" cy="326.4" r="5.9"/>
-	<circle class="st1" cx="391.8" cy="324.4" r="5.9"/>
-	<circle class="st1" cx="418.7" cy="322.4" r="5.9"/>
-	<circle class="st1" cx="440.4" cy="320.6" r="5.9"/>
-	<circle class="st1" cx="465.6" cy="318.5" r="5.9"/>
-	<circle class="st1" cx="287.6" cy="324.4" r="5.9"/>
-	<circle class="st1" cx="265.5" cy="321.4" r="5.9"/>
-	<circle class="st1" cx="244.6" cy="316.5" r="5.9"/>
-	<circle class="st1" cx="223.8" cy="310.6" r="5.9"/>
-	<circle class="st1" cx="202.3" cy="303.3" r="5.9"/>
-	<circle class="st1" cx="183.2" cy="296.1" r="5.9"/>
-	<circle class="st1" cx="163.8" cy="289.2" r="5.9"/>
-	<circle class="st1" cx="144.1" cy="282.1" r="5.9"/>
+<g id="Layer_2_00000135666086459241289000000008803790684897184141_">
+	<circle class="st1" cx="182.6" cy="154.1" r="5.9"/>
+	<circle class="st1" cx="186.5" cy="131.4" r="5.9"/>
+	<circle class="st1" cx="188.5" cy="110.3" r="5.9"/>
+	<circle class="st1" cx="190.3" cy="89.2" r="5.9"/>
+	<circle class="st1" cx="193.4" cy="67" r="5.9"/>
+	<circle class="st1" cx="194.2" cy="44.9" r="5.9"/>
+	<circle class="st1" cx="197.2" cy="21.4" r="5.9"/>
+	<circle class="st1" cx="190.3" cy="184.5" r="5.9"/>
+	<circle class="st1" cx="199.3" cy="203.5" r="5.9"/>
+	<circle class="st1" cx="211.4" cy="225.7" r="5.9"/>
+	<circle class="st1" cx="222.2" cy="249.5" r="5.9"/>
+	<circle class="st1" cx="233.1" cy="275" r="5.9"/>
+	<circle class="st1" cx="244.9" cy="296.8" r="5.9"/>
+	<circle class="st1" cx="256.1" cy="320.4" r="5.9"/>
+	<circle class="st1" cx="266" cy="344.2" r="5.9"/>
+	<circle class="st1" cx="167.6" cy="182" r="5.9"/>
+	<circle class="st1" cx="156.7" cy="199.7" r="5.9"/>
+	<circle class="st1" cx="143.1" cy="219.8" r="5.9"/>
+	
+		<ellipse transform="matrix(0.1602 -0.9871 0.9871 0.1602 -123.4111 329.3523)" class="st1" cx="131.8" cy="237.2" rx="5.9" ry="5.9"/>
+	<circle class="st1" cx="118.2" cy="255.3" r="5.9"/>
+	<circle class="st1" cx="103.5" cy="273.6" r="5.9"/>
+	<circle class="st1" cx="88.6" cy="290.9" r="5.9"/>
+	<circle class="st1" cx="74.1" cy="308.6" r="5.9"/>
+	<circle class="st1" cx="61" cy="323.6" r="5.9"/>
+	<circle class="st1" cx="197.2" cy="167.3" r="5.9"/>
+	<circle class="st1" cx="217.3" cy="167.3" r="5.9"/>
+	<circle class="st1" cx="242.1" cy="166.3" r="5.9"/>
+	<circle class="st1" cx="268.4" cy="164.3" r="5.9"/>
+	<circle class="st1" cx="295.3" cy="162.3" r="5.9"/>
+	<circle class="st1" cx="317" cy="160.5" r="5.9"/>
+	<circle class="st1" cx="342.2" cy="158.4" r="5.9"/>
+	<circle class="st1" cx="164.2" cy="164.3" r="5.9"/>
+	<circle class="st1" cx="142.1" cy="161.3" r="5.9"/>
+	<circle class="st1" cx="121.2" cy="156.4" r="5.9"/>
+	<circle class="st1" cx="100.4" cy="150.5" r="5.9"/>
+	<circle class="st1" cx="78.9" cy="143.2" r="5.9"/>
+	<circle class="st1" cx="59.8" cy="136" r="5.9"/>
+	<circle class="st1" cx="40.4" cy="129.1" r="5.9"/>
+	<circle class="st1" cx="20.7" cy="122" r="5.9"/>
 </g>
 </svg>
