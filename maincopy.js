@@ -7,7 +7,6 @@ const playerOneWins = document.querySelector(".o-wins .message");
 const playerTwoWins = document.querySelector(".x-wins .message");
 const playerTurn = document.querySelector(".player-turn .message");
 const resetButton = document.querySelector(".reset-game");
-//const themeButtons = document.querySelectorAll(".theme-buttons button");
 const grid = document.querySelector(".grid");
 
 //theme button buttons
@@ -19,21 +18,23 @@ const fallButton = document.querySelector(".theme-5");
 const winterButton = document.querySelector(".theme-6");
 const pixelButton = document.querySelector(".theme-7");
 
+let theme = "basic";
+
 // Variables
 let currentPlayer = "o";
 let moves = 0;
-let board = ["", "", "", "", "", "", "", "", ""];
+let board = ["x", "o", "x", "", "o", "", "", "o", ""];
 
 
 // Function to reset the board
-/*function resetBoard() {
+function resetBoard() {
   // Remove all symbols from the tiles
   tiles.forEach(tile => {
     if (tile.children.length > 0) {
       tile.removeChild(tile.children[0]);
     }
   });
-}*/
+}
 
 function resetGame() {
   currentPlayer = "o";
@@ -50,6 +51,7 @@ function resetGame() {
 // Changing Game Theme
 function changeBasic() {
   //change xs and os
+
   root.style.setProperty('--background-colour', '#1d3557');
   root.style.setProperty('--text-colour', '#f1faee');
   root.style.setProperty('--border-colour', 'black');
@@ -58,6 +60,10 @@ function changeBasic() {
   root.style.setProperty('--button-text', 'black');
   root.style.setProperty('--button-background', '#bebebe');
   //root.style.setProperty('--background-image', '');
+
+  resetBoard();
+  theme = "basic";
+  draw();
 }
 
 function changeDoodle() {
@@ -70,10 +76,16 @@ function changeDoodle() {
   root.style.setProperty('--button-text', '#04052d');
   root.style.setProperty('--button-background', '#b7434f');
   //root.style.setProperty('--background-image', '');
+
+  resetBoard();
+  theme = "doodle";
+  console.log(theme);
+  draw();
 }
 
 function changeSpring() {
   //change xs and os
+  theme = "spring";
   root.style.setProperty('--background-colour', '#9bff80');
   root.style.setProperty('--text-colour', '#87092d');
   root.style.setProperty('--border-colour', '#f1e973');
@@ -159,7 +171,6 @@ for (const condition of winConditions) {
   return false;
 }
 
-//need a draw fn
 // Handle a Move
 function handleMove(event) {
   //checking for p
@@ -184,6 +195,33 @@ function handleMove(event) {
     }
   }
 }
+
+function draw(){
+  console.log("e");
+  for(let i = 0; i < board.length; i++){
+    const tile = document.createElement("div");
+    tile.classList.add("tile");
+    if(board[i] === ""){
+      tile.textContent="";
+      //if current player x, set board[i] x, etc
+      tile.addEventListener("click", (event)=>{console.log("clickedtile", i)});
+    }
+    if(board[i] === "o"){
+      console.log(theme);
+      const img = document.createElement("img");
+      img.setAttribute("src", `./images/o-${theme}.svg`);
+      tile.appendChild(img);
+    }
+    if(board[i] === "x"){
+      const img = document.createElement("img");
+      img.setAttribute("src", `./images/x-${theme}.svg`);
+      tile.appendChild(img);
+    }
+    grid.appendChild(tile);
+  }
+}
+
+draw();
 
 
 // Event Listeners
