@@ -6,8 +6,17 @@ const playerOneWins = document.querySelector(".o-wins .message");
 const playerTwoWins = document.querySelector(".x-wins .message");
 const playerTurn = document.querySelector(".player-turn .message");
 const resetButton = document.querySelector(".reset-game");
-const themeButtons = document.querySelectorAll(".theme-buttons button");
+//const themeButtons = document.querySelectorAll(".theme-buttons button");
 const grid = document.querySelector(".grid");
+
+//theme button buttons
+const basicButton = document.querySelector(".theme-1");
+const doodleButton = document.querySelector(".theme-2");
+const springButton = document.querySelector(".theme-3");
+const summerButton = document.querySelector(".theme-4");
+const fallButton = document.querySelector(".theme-5");
+const winterButton = document.querySelector(".theme-6");
+const pixelButton = document.querySelector(".theme-7");
 
 // Variables
 let currentPlayer = "o";
