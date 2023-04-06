@@ -18,12 +18,13 @@ const fallButton = document.querySelector(".theme-5");
 const winterButton = document.querySelector(".theme-6");
 const pixelButton = document.querySelector(".theme-7");
 
-let theme = "basic";
+
 
 // Variables
+let theme = "basic";
 let currentPlayer = "o";
 let moves = 0;
-let board = ["x", "o", "x", "", "o", "", "", "o", ""];
+let board = ["x", "o", "x", "", "o", "", "", "", ""];
 
 
 // Function to reset the board
@@ -34,6 +35,7 @@ function resetBoard() {
       tile.removeChild(tile.children[0]);
     }
   });
+  draw();
 }
 
 function resetGame() {
@@ -46,12 +48,14 @@ function resetGame() {
   //just hiding img, not deleting
   grid.querySelectorAll("img").forEach((img) => (img.style.display = "none"));
   grid.querySelectorAll("p").forEach((p) => (p.style.display = "block"));
+  draw();
 }
 
 // Changing Game Theme
 function changeBasic() {
   //change xs and os
-
+  theme = "basic";
+  console.log(theme);
   root.style.setProperty('--background-colour', '#1d3557');
   root.style.setProperty('--text-colour', '#f1faee');
   root.style.setProperty('--border-colour', 'black');
@@ -61,13 +65,13 @@ function changeBasic() {
   root.style.setProperty('--button-background', '#bebebe');
   //root.style.setProperty('--background-image', '');
 
-  resetBoard();
-  theme = "basic";
   draw();
 }
 
 function changeDoodle() {
   //change xs and os
+  theme = "doodle";
+  console.log(theme);
   root.style.setProperty('--background-colour', '#BBBBBB');
   root.style.setProperty('--text-colour', '#04052d');
   root.style.setProperty('--border-colour', '#b7434f');
@@ -77,9 +81,6 @@ function changeDoodle() {
   root.style.setProperty('--button-background', '#b7434f');
   //root.style.setProperty('--background-image', '');
 
-  resetBoard();
-  theme = "doodle";
-  console.log(theme);
   draw();
 }
 
@@ -197,6 +198,9 @@ function handleMove(event) {
 }
 
 function draw(){
+  while(grid.firstChild){
+    grid.removeChild(grid.firstChild);
+  }
   console.log("e");
   for(let i = 0; i < board.length; i++){
     const tile = document.createElement("div");
@@ -223,10 +227,8 @@ function draw(){
 
 draw();
 
-
 // Event Listeners
 resetButton.addEventListener("click", resetGame);
-//themeButtons.forEach((button) => button.addEventListener("click", changeTheme));
 basicButton.addEventListener("click", changeBasic);
 doodleButton.addEventListener("click", changeDoodle);
 springButton.addEventListener("click", changeSpring);
