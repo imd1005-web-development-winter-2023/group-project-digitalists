@@ -2,6 +2,7 @@
 //  JS File
 
 // Constants
+const root = document.documentElement;
 const playerOneWins = document.querySelector(".o-wins .message");
 const playerTwoWins = document.querySelector(".x-wins .message");
 const playerTurn = document.querySelector(".player-turn .message");
@@ -37,6 +38,13 @@ function resetGame() {
 }
 
 // Changing Game Theme
+function changeTheme () {
+
+}
+function changeDoodle() {
+  console.log("text");
+  root.style.setProperty('--background-colour', 'white');
+}
 
 //Check if Game has ended
 function checkWin() {
@@ -90,6 +98,7 @@ function handleMove(event) {
 }
 // Event Listeners
 resetButton.addEventListener("click", resetGame);
-themeButtons.forEach((button) => button.addEventListener("click", changeTheme));
+//themeButtons.forEach((button) => button.addEventListener("click", changeTheme));
+doodleButton.addEventListener("click", changeDoodle);
 grid.addEventListener("click", handleMove);
 
