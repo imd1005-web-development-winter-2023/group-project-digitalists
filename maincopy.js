@@ -204,7 +204,7 @@ function handleMove(event) {
   ) {
     // EDIT 3
     // Console log the board status
-    console.log(board);
+    console.log("BEFORE", board);
     const index = [...event.target.parentNode.children].indexOf(event.target);
     if (!board[index]) {
       moves++;
@@ -225,6 +225,7 @@ function handleMove(event) {
         }'s turn.`;
       }
     }
+    console.log("AFTER", board);
     // EDIT 2
     // After any change in your state you should
     // fire the draw function to update
