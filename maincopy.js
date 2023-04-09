@@ -190,20 +190,10 @@ function checkWin() {
 
 // Handle a Move
 function handleMove(event) {
-  // EDIT 1
-  // You were originally checking for P
-  // This won't work because there aren't any P's in the
-  // draw function.
-  // The IF below checks if the click occured in a DIV and
-  // that that DIV has a class called TILE
-  // This should ensure that only clicks that are clicked in a div
-  // are acted on
   if (
     event.target.tagName === "DIV" &&
     event.target.classList.contains("tile")
   ) {
-    // EDIT 3
-    // Console log the board status
     console.log("BEFORE", board);
     const index = [...event.target.parentNode.children].indexOf(event.target);
     if (!board[index]) {
@@ -226,15 +216,13 @@ function handleMove(event) {
       }
     }
     console.log("AFTER", board);
-    // EDIT 2
-    // After any change in your state you should
-    // fire the draw function to update
-    // the game board
+ 
     draw();
   }
 }
 
 function draw() {
+ const grid = document.getElementById("grid");
   while (grid.firstChild) {
     grid.removeChild(grid.firstChild);
   }
@@ -250,7 +238,7 @@ function draw() {
       // and it fires the HandleMove function
       //
       //if current player x, set board[i] x, etc
-      //tile.addEventListener("click", (event)=>{console.log("clickedtile", i)});
+    tile.addEventListener("click", (event)=>{console.log("clickedtile", i)});
     }
     if (board[i] === "o") {
       console.log(theme);
@@ -263,6 +251,7 @@ function draw() {
       img.setAttribute("src", `./images/x-${theme}.svg`);
       tile.appendChild(img);
     }
+    tile.addEventListener("click", (event)=>{console.log("clickedtile", i)});
     grid.appendChild(tile);
   }
 }
