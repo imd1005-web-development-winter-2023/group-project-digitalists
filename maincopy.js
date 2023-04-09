@@ -238,7 +238,6 @@ function draw() {
       // and it fires the HandleMove function
       //
       //if current player x, set board[i] x, etc
-    tile.addEventListener("click", (event)=>{console.log("clickedtile", i)});
     }
     if (board[i] === "o") {
       console.log(theme);
