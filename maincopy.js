@@ -232,12 +232,6 @@ function draw() {
     tile.classList.add("tile");
     if (board[i] === "") {
       tile.textContent = "";
-      // EDIT 4
-      // Commenting out the following because
-      // there is already an event handler on the grid
-      // and it fires the HandleMove function
-      //
-      //if current player x, set board[i] x, etc
     }
     if (board[i] === "o") {
       console.log(theme);
@@ -250,7 +244,6 @@ function draw() {
       img.setAttribute("src", `./images/x-${theme}.svg`);
       tile.appendChild(img);
     }
-    tile.addEventListener("click", (event)=>{console.log("clickedtile", i)});
     grid.appendChild(tile);
   }
 }
