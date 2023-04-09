@@ -200,7 +200,7 @@ function handleMove(event) {
       moves++;
       board[index] = currentPlayer;
       event.target.style.display = "none";
-      // grid.querySelectorAll("img")[index].style.display = "block";
+      grid.querySelectorAll("img")[index].style.display = "block";
       if (checkWin()) {
         if (currentPlayer === "o") {
           playerOneWins.innerText = parseInt(playerOneWins.innerText) + 1;
