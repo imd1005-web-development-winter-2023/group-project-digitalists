@@ -50,86 +50,114 @@ function resetGame() {
 // Changing Game Theme
 function changeBasic() {
   //change xs and os
-  root.style.setProperty('--background-colour', '#1d3557');
-  root.style.setProperty('--text-colour', '#f1faee');
-  root.style.setProperty('--border-colour', 'black');
-  root.style.setProperty('--o-player', 'green');
-  root.style.setProperty('--x-player', 'red');
-  root.style.setProperty('--button-text', 'black');
-  root.style.setProperty('--button-background', '#bebebe');
-  //root.style.setProperty('--background-image', '');
+  theme = "basic";
+  console.log(theme);
+  root.style.setProperty("--background-colour", "#1d3557");
+  root.style.setProperty("--text-colour", "#f1faee");
+  root.style.setProperty("--border-colour", "black");
+  root.style.setProperty("--o-player", "green");
+  root.style.setProperty("--x-player", "red");
+  root.style.setProperty("--button-text", "black");
+  root.style.setProperty("--button-background", "#bebebe");
+  root.style.setProperty("--background-image", "");
+
+  draw();
 }
 
 function changeDoodle() {
   //change xs and os
-  root.style.setProperty('--background-colour', '#BBBBBB');
-  root.style.setProperty('--text-colour', '#04052d');
-  root.style.setProperty('--border-colour', '#b7434f');
-  root.style.setProperty('--o-player', '#276ee0');
-  root.style.setProperty('--x-player', '#ef8607');
-  root.style.setProperty('--button-text', '#04052d');
-  root.style.setProperty('--button-background', '#b7434f');
-  //root.style.setProperty('--background-image', '');
+  theme = "doodle";
+  console.log(theme);
+  root.style.setProperty("--background-colour", "#BBBBBB");
+  root.style.setProperty("--text-colour", "#04052d");
+  root.style.setProperty("--border-colour", "#b7434f");
+  root.style.setProperty("--o-player", "#276ee0");
+  root.style.setProperty("--x-player", "#ef8607");
+  root.style.setProperty("--button-text", "#04052d");
+  root.style.setProperty("--button-background", "#b7434f");
+  root.style.setProperty("--background-image", "url(./images/bg-doodle.png)");
+
+  draw();
 }
 
 function changeSpring() {
   //change xs and os
-  root.style.setProperty('--background-colour', '#9bff80');
-  root.style.setProperty('--text-colour', '#87092d');
-  root.style.setProperty('--border-colour', '#f1e973');
-  root.style.setProperty('--o-player', '#ce1f44');
-  root.style.setProperty('--x-player', '#e29bc4');
-  root.style.setProperty('--button-text', '#87092d');
-  root.style.setProperty('--button-background', '#f1e973');
-  //root.style.setProperty('--background-image', '');
+  theme = "spring";
+  console.log(theme);
+  root.style.setProperty("--background-colour", "#ACE27F");
+  root.style.setProperty("--text-colour", "#87092d");
+  root.style.setProperty("--border-colour", "#f1e973");
+  root.style.setProperty("--o-player", "#ce1f44");
+  root.style.setProperty("--x-player", "#e29bc4");
+  root.style.setProperty("--button-text", "#87092d");
+  root.style.setProperty("--button-background", "#f1e973");
+  root.style.setProperty("--background-image", "url(./images/bg-spring.png)");
+
+  draw();
 }
 
 function changeSummer() {
   //change xs and os
-  root.style.setProperty('--background-colour', '#46b0e2');
-  root.style.setProperty('--text-colour', '#b78101');
-  root.style.setProperty('--border-colour', '#f1b715');
-  root.style.setProperty('--o-player', '#eef2f4');
-  root.style.setProperty('--x-player', '#ec5f4c');
-  root.style.setProperty('--button-text', '#b78101');
-  root.style.setProperty('--button-background', '#f1b715');
-  //root.style.setProperty('--background-image', '');
+  theme = "summer";
+  console.log(theme);
+  root.style.setProperty("--background-colour", "#46b0e2");
+  root.style.setProperty("--text-colour", "#b78101");
+  root.style.setProperty("--border-colour", "#f1b715");
+  root.style.setProperty("--o-player", "#eef2f4");
+  root.style.setProperty("--x-player", "#ec5f4c");
+  root.style.setProperty("--button-text", "#b78101");
+  root.style.setProperty("--button-background", "#f1b715");
+  root.style.setProperty("--background-image", "url(./images/bg-summer.png)");
+
+  draw();
 }
 
 function changeFall() {
   //change xs and os
-  root.style.setProperty('--background-colour', '#BBBBBB');
-  root.style.setProperty('--text-colour', '#04052d');
-  root.style.setProperty('--border-colour', '#b7434f');
-  root.style.setProperty('--o-player', '#276ee0');
-  root.style.setProperty('--x-player', '#ef8607');
-  root.style.setProperty('--button-text', '#04052d');
-  root.style.setProperty('--button-background', '#b7434f');
-  //root.style.setProperty('--background-image', '');
+  theme = "fall";
+  console.log(theme);
+  root.style.setProperty("--background-colour", "#E48b68");
+  root.style.setProperty("--text-colour", "#87b123");
+  root.style.setProperty("--border-colour", "#FCA74C");
+  root.style.setProperty("--o-player", "#775528");
+  root.style.setProperty("--x-player", "#d34e27");
+  root.style.setProperty("--button-text", "#473318");
+  root.style.setProperty("--button-background", "#FCA74C");
+  root.style.setProperty("--background-image", "url(./images/bg-fall.png)");
+
+  draw();
 }
 
 function changeWinter() {
   //change xs and os
-  root.style.setProperty('--background-colour', '#BBBBBB');
-  root.style.setProperty('--text-colour', '#04052d');
-  root.style.setProperty('--border-colour', '#b7434f');
-  root.style.setProperty('--o-player', '#276ee0');
-  root.style.setProperty('--x-player', '#ef8607');
-  root.style.setProperty('--button-text', '#04052d');
-  root.style.setProperty('--button-background', '#b7434f');
-  //root.style.setProperty('--background-image', '');
+  theme = "winter";
+  console.log(theme);
+  root.style.setProperty("--background-colour", "#393e83");
+  root.style.setProperty("--text-colour", "#1e1266");
+  root.style.setProperty("--border-colour", "#788f9a");
+  root.style.setProperty("--o-player", "#f6ac4c");
+  root.style.setProperty("--x-player", "#97d8e7");
+  root.style.setProperty("--button-text", "#dfedf3");
+  root.style.setProperty("--button-background", "#788f9a");
+  root.style.setProperty("--background-image", "url(./images/bg-winter.png)");
+
+  draw();
 }
 
 function changePixel() {
   //change xs and os
-  root.style.setProperty('--background-colour', '#BBBBBB');
-  root.style.setProperty('--text-colour', '#04052d');
-  root.style.setProperty('--border-colour', '#b7434f');
-  root.style.setProperty('--o-player', '#276ee0');
-  root.style.setProperty('--x-player', '#ef8607');
-  root.style.setProperty('--button-text', '#04052d');
-  root.style.setProperty('--button-background', '#b7434f');
-  //root.style.setProperty('--background-image', '');
+  theme = "pixel";
+  console.log(theme);
+  root.style.setProperty("--background-colour", "#BBBBBB");
+  root.style.setProperty("--text-colour", "#ff4165");
+  root.style.setProperty("--border-colour", "#C0FF00");
+  root.style.setProperty("--o-player", "#C0FF00");
+  root.style.setProperty("--x-player", "#ff4165");
+  root.style.setProperty("--button-text", "#04052d");
+  root.style.setProperty("--button-background", "#C0FF00");
+  root.style.setProperty("--background-image", "url(./images/bg-pixel.png)");
+
+  draw();
 }
 
 //Check if Game has ended
@@ -162,8 +190,11 @@ for (const condition of winConditions) {
 //need a draw fn
 // Handle a Move
 function handleMove(event) {
-  //checking for p
-  if (event.target.tagName === "P") {
+  if (
+    event.target.tagName === "DIV" &&
+    event.target.classList.contains("tile")
+  ) {
+    console.log("BEFORE", board);
     const index = [...event.target.parentNode.children].indexOf(event.target);
     if (!board[index]) {
       moves++;
@@ -179,9 +210,14 @@ function handleMove(event) {
         resetGame();
       } else {
         currentPlayer = currentPlayer === "o" ? "x" : "o";
-        playerTurn.innerText = `It is player ${currentPlayer === "o" ? 1 : 2}'s turn.`;
+        playerTurn.innerText = `It is player ${
+          currentPlayer === "o" ? 1 : 2
+        }'s turn.`;
       }
     }
+    console.log("AFTER", board);
+ 
+    draw();
   }
 }
 
