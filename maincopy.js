@@ -224,7 +224,7 @@ function handleMove(event) {
 }*/
 function handleMove(event) {
   if (
-    event.target.tagName === "P" &&
+    event.target.tagName === "DIV" &&
     event.target.classList.contains("tile")
   ) {
     console.log("BEFORE", board);
