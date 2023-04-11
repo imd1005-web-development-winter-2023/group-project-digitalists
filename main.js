@@ -225,7 +225,7 @@ function handleMove(event) {
 }
 
 /*function draw() {
- const grid = document.getElementById("grid");
+  //there is no second const grid here!!!!!! fuck off!!!!
   while (grid.firstChild) {
     grid.removeChild(grid.firstChild);
   }
@@ -235,6 +235,7 @@ function handleMove(event) {
     tile.classList.add("tile");
     if (board[i] === "") {
       tile.textContent = "";
+      tile.addEventListener("click", (event)=>{console.log("clickedtile",i)});
     }
     if (board[i] === "o") {
       console.log(theme);
