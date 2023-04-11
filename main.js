@@ -20,9 +20,10 @@ const winterButton = document.querySelector(".theme-6");
 const pixelButton = document.querySelector(".theme-7");
 
 // Variables
+let theme = "basic";
 let currentPlayer = "o";
 let moves = 0;
-let board = ["x", "o", "", "", "", "", "", "", ""];
+let board = ["x", "o", "x", "", "o", "", "", "", "o"];
 
 
 // Function to reset the board
