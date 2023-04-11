@@ -22,7 +22,7 @@ const pixelButton = document.querySelector(".theme-7");
 // Variables
 let currentPlayer = "o";
 let moves = 0;
-let board = ["", "", "", "", "", "", "", "", ""];
+let board = ["x", "o", "", "", "", "", "", "", ""];
 
 
 // Function to reset the board
