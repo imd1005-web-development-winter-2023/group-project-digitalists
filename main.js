@@ -26,7 +26,7 @@ let board = ["", "", "", "", "", "", "", "", ""];
 
 
 // Function to reset the board
-function resetBoard() {
+/*function resetBoard() {
   // Remove all symbols from the tiles
   tiles.forEach((tile) => {
     if (tile.children.length > 0) {
@@ -34,7 +34,8 @@ function resetBoard() {
     }
   });
   draw();
-}
+}*/
+
 
 function resetGame() {
   currentPlayer = "o";
