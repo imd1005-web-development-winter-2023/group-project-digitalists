@@ -224,7 +224,34 @@ function handleMove(event) {
   }
 }
 
+function draw() {
+ const grid = document.getElementById("grid");
+  while (grid.firstChild) {
+    grid.removeChild(grid.firstChild);
+  }
+  console.log("e");
+  for (let i = 0; i < board.length; i++) {
+    const tile = document.createElement("div");
+    tile.classList.add("tile");
+    if (board[i] === "") {
+      tile.textContent = "";
+    }
+    if (board[i] === "o") {
+      console.log(theme);
+      const img = document.createElement("img");
+      img.setAttribute("src", `./images/o-${theme}.svg`);
+      tile.appendChild(img);
+    }
+    if (board[i] === "x") {
+      const img = document.createElement("img");
+      img.setAttribute("src", `./images/x-${theme}.svg`);
+      tile.appendChild(img);
+    }
+    grid.appendChild(tile);
+  }
+}
 
+draw();
 
 // Event Listeners
 resetButton.addEventListener("click", resetGame);
