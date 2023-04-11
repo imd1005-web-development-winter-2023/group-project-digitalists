@@ -189,6 +189,8 @@ function checkWin() {
 }
 
 // Handle a Move
+
+/*older version of this code
 function handleMove(event) {
   if (
     event.target.tagName === "DIV" &&
@@ -217,12 +219,42 @@ function handleMove(event) {
     }
     console.log("AFTER", board);
  
-    draw();
+    //draw();
+  }
+}*/
+function handleMove(event) {
+  if (
+    event.target.tagName === "P" &&
+    event.target.classList.contains("tile")
+  ) {
+    console.log("BEFORE", board);
+    const index = [...event.target.parentNode.children].indexOf(event.target);
+    if (!board[index]) {
+      moves++;
+      board[index] = currentPlayer;
+      event.target.style.display = "none";
+      grid.querySelectorAll("img")[index].style.display = "block";
+      if (checkWin()) {
+        if (currentPlayer === "o") {
+          playerOneWins.innerText = parseInt(playerOneWins.innerText) + 1;
+        } else {
+          playerTwoWins.innerText = parseInt(playerTwoWins.innerText) + 1;
+        }
+        resetGame();
+      } else {
+        currentPlayer = currentPlayer === "o" ? "x" : "o";
+        playerTurn.innerText = `It is player ${
+          currentPlayer === "o" ? 1 : 2
+        }'s turn.`;
+      }
+    }
+    console.log("AFTER", board);
+ 
+    //draw();
   }
 }
 
 function draw() {
- const grid = document.getElementById("grid");
   while (grid.firstChild) {
     grid.removeChild(grid.firstChild);
   }
