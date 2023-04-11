@@ -246,10 +246,12 @@ function draw() {
       tile.appendChild(img);
     }
     grid.appendChild(tile);
+    
+    draw();
   }
 }
 
-draw();
+
 
 
 // Event Listeners
