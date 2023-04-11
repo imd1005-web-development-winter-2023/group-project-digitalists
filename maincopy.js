@@ -265,6 +265,7 @@ function draw() {
     tile.classList.add("tile");
     if (board[i] === "") {
       tile.textContent = "";
+      tile.addEventListener("click", (event)=>{console.log("clickedtile",i)});
     }
     if (board[i] === "o") {
       console.log(theme);
