@@ -224,7 +224,7 @@ function handleMove(event) {
   }
 }
 
-function draw() {
+/*function draw() {
  const grid = document.getElementById("grid");
   while (grid.firstChild) {
     grid.removeChild(grid.firstChild);
@@ -251,7 +251,8 @@ function draw() {
   }
 }
 
-draw();
+draw();*/
+
 
 // Event Listeners
 resetButton.addEventListener("click", resetGame);
