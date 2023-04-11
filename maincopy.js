@@ -255,6 +255,7 @@ function handleMove(event) {
 }
 
 function draw() {
+  //there is no second const grid here!!!!!! fuck off!!!!
   while (grid.firstChild) {
     grid.removeChild(grid.firstChild);
   }
