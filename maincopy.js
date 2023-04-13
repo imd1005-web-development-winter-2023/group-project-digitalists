@@ -229,15 +229,11 @@ function handleMove(event) {
   ) {
     console.log("BEFORE", board);
     const index = [...event.target.parentNode.children].indexOf(event.target);
-    console.log("Board index", index);
     if (!board[index]) {
       moves++;
       board[index] = currentPlayer;
-      // event.target.style.display = "none";
-      
-      console.log("array index", index)
-
-      // grid.querySelectorAll("img")[index].style.display = "block";
+      event.target.style.display = "none";
+      grid.querySelectorAll("img")[index].style.display = "block";
       if (checkWin()) {
         if (currentPlayer === "o") {
           playerOneWins.innerText = parseInt(playerOneWins.innerText) + 1;
@@ -254,7 +250,7 @@ function handleMove(event) {
     }
     console.log("AFTER", board);
  
-    draw();
+    //draw();
   }
 }
 
@@ -265,17 +261,11 @@ function draw() {
   }
   console.log("e");
   for (let i = 0; i < board.length; i++) {
-
-    console.log("board length", board.length)
-
     const tile = document.createElement("div");
     tile.classList.add("tile");
-
-    console.log(board[i], i);
-
     if (board[i] === "") {
       tile.textContent = "";
-      // tile.addEventListener("click", (event)=>{console.log("clickedtile",i)});
+      tile.addEventListener("click", (event)=>{console.log("clickedtile",i)});
     }
     if (board[i] === "o") {
       console.log(theme);
@@ -289,7 +279,6 @@ function draw() {
       tile.appendChild(img);
     }
     grid.appendChild(tile);
-    console.log('I ran here');
   }
 }
 
