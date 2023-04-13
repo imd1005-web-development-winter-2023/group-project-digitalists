@@ -7,7 +7,6 @@ const playerOneWins = document.querySelector(".o-wins .message");
 const playerTwoWins = document.querySelector(".x-wins .message");
 const playerTurn = document.querySelector(".player-turn .message");
 const resetButton = document.querySelector(".reset-game");
-//const themeButtons = document.querySelectorAll(".theme-buttons button");
 const grid = document.querySelector(".grid");
 
 //theme button buttons
@@ -25,9 +24,8 @@ let currentPlayer = "o";
 let moves = 0;
 let board = ["x", "o", "x", "", "o", "", "", "", "o"];
 
-
 // Function to reset the board
-/*function resetBoard() {
+function resetBoard() {
   // Remove all symbols from the tiles
   tiles.forEach((tile) => {
     if (tile.children.length > 0) {
@@ -35,8 +33,7 @@ let board = ["x", "o", "x", "", "o", "", "", "", "o"];
     }
   });
   draw();
-}*/
-
+}
 
 function resetGame() {
   currentPlayer = "o";
@@ -48,6 +45,7 @@ function resetGame() {
   //just hiding img, not deleting
   grid.querySelectorAll("img").forEach((img) => (img.style.display = "none"));
   grid.querySelectorAll("p").forEach((p) => (p.style.display = "block"));
+  draw();
 }
 
 // Changing Game Theme
@@ -176,7 +174,7 @@ function checkWin() {
     [2, 4, 6],
   ];
 
-for (const condition of winConditions) {
+  for (const condition of winConditions) {
     const [a, b, c] = condition;
     if (board[a] && board[a] === board[b] && board[a] === board[c]) {
       return true;
@@ -190,8 +188,9 @@ for (const condition of winConditions) {
   return false;
 }
 
-//need a draw fn
 // Handle a Move
+
+/*older version of this code
 function handleMove(event) {
   if (
     event.target.tagName === "DIV" &&
@@ -220,22 +219,63 @@ function handleMove(event) {
     }
     console.log("AFTER", board);
  
+    //draw();
+  }
+}*/
+function handleMove(event) {
+  if (
+    event.target.tagName === "DIV" &&
+    event.target.classList.contains("tile")
+  ) {
+    console.log("BEFORE", board);
+    const index = [...event.target.parentNode.children].indexOf(event.target);
+    console.log("Board index", index);
+    if (!board[index]) {
+      moves++;
+      board[index] = currentPlayer;
+      // event.target.style.display = "none";
+      
+      console.log("array index", index)
+
+      // grid.querySelectorAll("img")[index].style.display = "block";
+      if (checkWin()) {
+        if (currentPlayer === "o") {
+          playerOneWins.innerText = parseInt(playerOneWins.innerText) + 1;
+        } else {
+          playerTwoWins.innerText = parseInt(playerTwoWins.innerText) + 1;
+        }
+        resetGame();
+      } else {
+        currentPlayer = currentPlayer === "o" ? "x" : "o";
+        playerTurn.innerText = `It is player ${
+          currentPlayer === "o" ? 1 : 2
+        }'s turn.`;
+      }
+    }
+    console.log("AFTER", board);
+ 
     draw();
   }
 }
 
-/*function draw() {
+function draw() {
   //there is no second const grid here!!!!!! fuck off!!!!
   while (grid.firstChild) {
     grid.removeChild(grid.firstChild);
   }
   console.log("e");
   for (let i = 0; i < board.length; i++) {
+
+    console.log("board length", board.length)
+
     const tile = document.createElement("div");
     tile.classList.add("tile");
+
+    console.log(board[i], i);
+
     if (board[i] === "") {
       tile.textContent = "";
-      tile.addEventListener("click", (event)=>{console.log("clickedtile",i)});
+      // tile.addEventListener("click", (event)=>{console.log("clickedtile",i)});
     }
     if (board[i] === "o") {
       console.log(theme);
@@ -249,15 +289,14 @@ function handleMove(event) {
       tile.appendChild(img);
     }
     grid.appendChild(tile);
+    console.log('I ran here');
   }
 }
 
-draw();*/
-
+draw();
 
 // Event Listeners
 resetButton.addEventListener("click", resetGame);
-//themeButtons.forEach((button) => button.addEventListener("click", changeTheme));
 basicButton.addEventListener("click", changeBasic);
 doodleButton.addEventListener("click", changeDoodle);
 springButton.addEventListener("click", changeSpring);
@@ -266,4 +305,3 @@ fallButton.addEventListener("click", changeFall);
 winterButton.addEventListener("click", changeWinter);
 pixelButton.addEventListener("click", changePixel);
 grid.addEventListener("click", handleMove);
-
